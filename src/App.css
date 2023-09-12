@@ -4,6 +4,7 @@
   box-sizing: border-box;
   direction: rtl;
   font-family: "custom-font" !important;
+  background-color: #F7F7F7;
 }
 @font-face {
   font-family: custom-font;
