@@ -1,6 +1,6 @@
 import axios from "axios";
 import config from "../config.json";
-import { ICategoryRequest } from "../types";
+import { ICategoryRequest, IProductRequest } from "../types";
 
 const headers = {
   Accept: "application/json",
@@ -24,18 +24,14 @@ export async function CategoriesApi() {
   return response;
 }
 /* get all products api */
-export function ProductsApi(id: number) {
-  //   setLoading(true);
-  let response;
-
-  axios
+export async function ProductsApi(id: number) {
+  let response: IProductRequest[] = [];
+  await axios
     .get(`${urls.products}${id}`, { headers: headers })
     .then((res) => {
       response = res.data.list;
-      //   setLoading(false);
     })
     .catch((err) => {
-      //   setLoading(false);
       console.log(err.response);
     });
   return response;

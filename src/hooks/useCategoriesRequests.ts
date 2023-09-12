@@ -10,7 +10,6 @@ export default function useCategoryRequests(): ICategoryRequests {
     queryFn: () => CategoriesApi(),
     onError: () => {
       ToastErrorMessage(dictionary.errors.general);
-      console.log("sss");
     },
     initialData: [],
   });

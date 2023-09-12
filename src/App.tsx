@@ -17,7 +17,7 @@ function App() {
           <Loader />
         ) : (
           <>
-            <PageHeader />
+            <PageHeader categories={categories} />
             <Routes>
               <Route path="/" element={<Home categories={categories} />} />
               <Route path="/category/:id" element={<Category />} />
