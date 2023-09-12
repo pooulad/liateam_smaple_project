@@ -3,4 +3,7 @@ export const dictionary = {
   footer: {
     social_text: "لیا را در شبکه‌های اجتماعی دنبال کنید",
   },
+  errors: {
+    general: "خطایی رخ داد",
+  },
 };
