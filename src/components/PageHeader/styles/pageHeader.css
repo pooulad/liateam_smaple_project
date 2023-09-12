@@ -7,17 +7,31 @@
   justify-content: center;
   align-items: flex-start;
 }
-.header img {
-  margin: 10px 0px;
+.logo {
+  margin: 10px;
 }
-.header_links{
+.header_bottom{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.header_links {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.cart_div{
+.cart_div {
   width: 100%;
+  display: inline-block;
+  text-align: left;
+}
+.cart_btn{
+  width: fit-content;
+  border: none;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
 }
 .active_header_link {
   color: #e53253;

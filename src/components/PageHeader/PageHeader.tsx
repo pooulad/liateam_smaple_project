@@ -3,17 +3,18 @@ import logo from "../../assets/images/loader.png";
 import { Link } from "react-router-dom";
 import "./styles/pageHeader.css";
 import { isLinkActive } from "../../utils/ActiveLink";
+import { useLocation } from "react-router-dom";
+import { CartIcon } from "../../assets/ts";
 
 type PageHeaderProps = {
   categories: ICategoryRequest[];
 };
 
 export default function PageHeader(props: PageHeaderProps) {
-  console.log(props.categories);
-
+  const location = useLocation();
   return (
     <div className="header">
-      <img src={logo} alt="logo" />
+      <img className="logo" src={logo} alt="logo" />
       <div className="header_bottom">
         <div className="header_links">
           {props.categories.map((item) => {
@@ -33,7 +34,11 @@ export default function PageHeader(props: PageHeaderProps) {
             );
           })}
         </div>
-        <div className="cart_div"></div>
+        <div className="cart_div">
+          <button type="button" className="cart_btn">
+            <CartIcon />
+          </button>
+        </div>
       </div>
     </div>
   );
