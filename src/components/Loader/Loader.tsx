@@ -18,6 +18,7 @@ function Loader({ children = null, loading = false }: ILoaderProps) {
         open={loading}
       >
       </Backdrop>
+      <CustomProgressBar />
       {children}
     </>
   );
