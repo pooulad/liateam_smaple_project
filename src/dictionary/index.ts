@@ -1,4 +1,5 @@
 export const dictionary = {
+  toman: "تومان",
   home: {
     title: "دسته بندی",
   },

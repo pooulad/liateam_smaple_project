@@ -16,6 +16,7 @@ export async function CategoriesApi() {
   await axios
     .get(urls.categoris, { headers: headers })
     .then((res) => {
+      localStorage.setItem("categories", JSON.stringify(res.data));
       response = res.data;
     })
     .catch((err) => {
