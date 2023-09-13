@@ -10,7 +10,6 @@ type HomeProps = {
 };
 
 export default function Home(props: HomeProps) {
-  console.log("s", props.categories);
   return (
     <div className="client_div">
       <span className="page_title">{dictionary.home.title}</span>

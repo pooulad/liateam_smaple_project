@@ -81,7 +81,7 @@ export default function PageHeader(props: PageHeaderProps) {
                 <div className="product_items_cart">
                   {cartItems?.map((item: CartData) => {
                     return (
-                      <div className="product_item_cart">
+                      <div key={item.data.id} className="product_item_cart">
                         <div className="product_item_cart_img">
                           <img
                             className=""

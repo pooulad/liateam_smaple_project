@@ -32,13 +32,16 @@ export function CartProvider({ children }: CartProviderProps) {
   const cartQtyItems = cartItems.length;
 
   const totalCount = cartItems.reduce((total, currentItem) => {
-    return total + (currentItem.data.price.final_price || 0);
+    return (
+      total + (currentItem.data.price.final_price || 0) * currentItem.count
+    );
   }, 0);
   const totalDiscount = cartItems.reduce((total, currentItem) => {
-    return total + (Number(currentItem.data.price.production_price) || 0);
+    return (
+      total +
+      (Number(currentItem.data.price.production_price) || 0) * currentItem.count
+    );
   }, 0);
-  console.log(totalDiscount);
-  
 
   function getItemQty(id: number) {
     return cartItems.find((item) => item.data.id === id)?.count || 0;
