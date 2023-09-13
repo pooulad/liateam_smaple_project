@@ -2,9 +2,7 @@ import footer_logo from "../../assets/images/footer_logo.png";
 import { Link } from "react-router-dom";
 import "./styles/pageFooter.css";
 import { dictionary } from "../../dictionary";
-import AparatIcon from "../../assets/ts/AparatIcon";
-import InstagramIcon from "../../assets/ts/InstagramIcon";
-import TelegramIcon from "../../assets/ts/TelegramIcon";
+import { AparatIcon, InstagramIcon, TelegramIcon } from "../../assets/ts";
 
 export default function PageFooter() {
   return (

@@ -10,23 +10,23 @@ export default function CartIcon() {
       <path
         d="M12 29.3333C12.7363 29.3333 13.3333 28.7363 13.3333 28C13.3333 27.2636 12.7363 26.6666 12 26.6666C11.2636 26.6666 10.6666 27.2636 10.6666 28C10.6666 28.7363 11.2636 29.3333 12 29.3333Z"
         stroke="#222222"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M26.6667 29.3333C27.4031 29.3333 28 28.7363 28 28C28 27.2636 27.4031 26.6666 26.6667 26.6666C25.9303 26.6666 25.3334 27.2636 25.3334 28C25.3334 28.7363 25.9303 29.3333 26.6667 29.3333Z"
         stroke="#222222"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M1.33337 1.33336H6.66671L10.24 19.1867C10.362 19.8006 10.6959 20.352 11.1834 20.7444C11.671 21.1369 12.281 21.3454 12.9067 21.3334H25.8667C26.4924 21.3454 27.1025 21.1369 27.59 20.7444C28.0775 20.352 28.4114 19.8006 28.5334 19.1867L30.6667 8.00003H8.00004"
         stroke="#222222"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

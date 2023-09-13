@@ -16,3 +16,7 @@ export interface IProductRequest {
   medium_pic: string;
   price: IPriceProduct;
 }
+export type CartData = {
+  count: number;
+  data: IProductRequest;
+};
