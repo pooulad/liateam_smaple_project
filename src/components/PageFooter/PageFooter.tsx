@@ -11,7 +11,9 @@ export default function PageFooter() {
     <footer className="footer">
       <div className="footer_content">
         <div className="footer_top">
-          <img className="footer_logo" src={footer_logo} alt="logo" />
+          <div>
+            <img className="footer_logo" src={footer_logo} alt="logo" />
+          </div>
           <p>
             <span>{dictionary.footer.copyright.section1}</span>
             &nbsp;
@@ -33,7 +35,11 @@ export default function PageFooter() {
             </div>
           </div>
         </div>
-        <div className="footer_bottom"></div>
+        <hr />
+        <div className="footer_bottom">
+          <p>{dictionary.footer.bottom.policy}</p>
+          <p>{dictionary.footer.bottom.call}</p>
+        </div>
       </div>
     </footer>
   );
