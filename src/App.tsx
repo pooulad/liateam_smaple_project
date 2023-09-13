@@ -3,6 +3,7 @@ import React, { Suspense } from "react";
 import "./App.css";
 import { PageHeader } from "./components/PageHeader/index";
 import useCategoryRequests from "./hooks/useCategoriesRequests";
+import { PageFooter } from "./components/PageFooter";
 const Intro = React.lazy(() => import("./components/Loader/Intro"));
 const Loader = React.lazy(() => import("./components/Loader/Loader"));
 const Category = React.lazy(() => import("./components/Category/Category"));
@@ -22,6 +23,7 @@ function App() {
               <Route path="/" element={<Home categories={categories} />} />
               <Route path="/category/:id" element={<Category />} />
             </Routes>
+            <PageFooter />
           </>
         )}
       </Suspense>
