@@ -1,0 +1,33 @@
+.footer{
+  width: 100%;
+  background-color: white;
+}
+.footer_content{
+  width: 80%;
+  margin: 0px auto;
+}
+.footer_top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_bottom{
+
+}
+.footer_social{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer_icons{
+  margin: 5px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center; 
+}
