@@ -1,0 +1,29 @@
+.category_section {
+  margin: 50px 0px;
+  padding: 20px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+.category_item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: none;
+}
+.category_item img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 300px;
+}
+.category_item span {
+  bottom: 0px;
+  width: 100%;
+  background-color: #dddddd;
+  margin-bottom: 10px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px;
+  color: #222222;
+}

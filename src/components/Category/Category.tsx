@@ -1,6 +1,7 @@
 import useProductRequests from "../../hooks/useProductsRequests";
 import { useParams } from "react-router-dom";
 import "./styles/category.css";
+import "../styles/common.css";
 
 export default function Category() {
   const { id } = useParams();
@@ -8,7 +9,7 @@ export default function Category() {
   console.log(products, productsLoading);
 
   return (
-    <div>
+    <div className="client_div">
       <div>cat</div>
       <div>cat</div>
       <div>cat</div>

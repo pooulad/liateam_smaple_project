@@ -1,3 +1,4 @@
 {
-  "url": "https://shopapi.liateam.com/api/rest/v1"
+  "url": "https://shopapi.liateam.com/api/rest/v1",
+  "domain": "https://shopapi.liateam.com"
 }

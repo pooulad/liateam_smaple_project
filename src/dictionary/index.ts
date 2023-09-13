@@ -1,4 +1,7 @@
 export const dictionary = {
+  home: {
+    title: "دسته بندی",
+  },
   gettingAssets: "در حال بارگیری صفحه ...",
   footer: {
     social_text: "لیا را در شبکه‌های اجتماعی دنبال کنید",
