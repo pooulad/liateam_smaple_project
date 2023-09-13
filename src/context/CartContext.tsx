@@ -15,6 +15,8 @@ type CartContext = {
   cartQty: number;
   cartItems: CartData[];
   cartQtyItems: number;
+  totalCount: number;
+  totalDiscount: number;
 };
 
 const CartContext = createContext({} as CartContext);
@@ -29,6 +31,14 @@ export function CartProvider({ children }: CartProviderProps) {
   const cartQty = cartItems.reduce((count, item) => item.count + count, 0);
   const cartQtyItems = cartItems.length;
 
+  const totalCount = cartItems.reduce((total, currentItem) => {
+    return total + (currentItem.data.price.final_price || 0);
+  }, 0);
+  const totalDiscount = cartItems.reduce((total, currentItem) => {
+    return total + (Number(currentItem.data.price.production_price) || 0);
+  }, 0);
+  console.log(totalDiscount);
+  
 
   function getItemQty(id: number) {
     return cartItems.find((item) => item.data.id === id)?.count || 0;
@@ -82,6 +92,8 @@ export function CartProvider({ children }: CartProviderProps) {
         cartQty,
         cartItems,
         cartQtyItems,
+        totalCount,
+        totalDiscount,
       }}
     >
       {children}

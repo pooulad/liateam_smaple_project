@@ -18,20 +18,21 @@ type PageHeaderProps = {
 export default function PageHeader(props: PageHeaderProps) {
   const location = useLocation();
   const [menu, setMenu] = useState<boolean>(false);
-  const { cartQtyItems, removeItem, cartItems, addItem, decreaseItem } =
-    useCartContext();
+  const {
+    cartQtyItems,
+    removeItem,
+    cartItems,
+    addItem,
+    decreaseItem,
+    totalCount,
+    totalDiscount,
+  } = useCartContext();
   const OpenCartMenuHandler = () => {
     setMenu(!menu);
   };
   const DeleteCartItemHandler = (id: number) => {
     removeItem(id);
   };
-  const totalCount = cartItems.reduce((total, currentItem) => {
-    return total + (currentItem.data.price.final_price || 0);
-  }, 0);
-  const totalDiscount = cartItems.reduce((total, currentItem) => {
-    return total + (Number(currentItem.data.price.production_price) || 0);
-  }, 0);
   return (
     <div className="header">
       <Link to={"/"}>
