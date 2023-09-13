@@ -1,14 +1,14 @@
 .header {
   width: 100%;
   background-color: white;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
 }
 .logo {
-  margin: 10px;
+  margin: 5px 20px;
 }
 .header_bottom{
   width: 100%;
@@ -19,7 +19,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 .cart_div {
   width: 100%;
@@ -32,18 +32,19 @@
   outline: none;
   background-color: white;
   cursor: pointer;
+  margin-left: 20px;
 }
 .active_header_link {
   color: #e53253;
   text-decoration: none;
   font-weight: 500;
-  margin: 5px 10px;
   font-size: 14px;
+  margin: 5px 20px;
 }
 .header_link {
   color: #717171;
   text-decoration: none;
   font-weight: 500;
-  margin: 5px 10px;
   font-size: 14px;
+  margin: 5px 20px;
 }
