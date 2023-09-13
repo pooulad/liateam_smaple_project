@@ -14,7 +14,9 @@ export default function PageHeader(props: PageHeaderProps) {
   const location = useLocation();
   return (
     <div className="header">
-      <img className="logo" src={logo} alt="logo" />
+      <Link to={"/"}>
+        <img className="logo" src={logo} alt="logo" />
+      </Link>
       <div className="header_bottom">
         <div className="header_links">
           {props.categories.map((item) => {
