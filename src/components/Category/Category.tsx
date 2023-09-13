@@ -2,24 +2,24 @@ import useProductRequests from "../../hooks/useProductsRequests";
 import { useParams } from "react-router-dom";
 import "./styles/category.css";
 import "../styles/common.css";
-import { ICategoryRequest, IProductRequest } from "../../types";
+import { CartData, ICategoryRequest, IProductRequest } from "../../types";
 import config from "../../config.json";
 import { dictionary } from "../../dictionary";
 import { moneyFormat } from "../../utils/TomanGenerator";
-import AddCartIcon from "../../assets/ts/AddCartIcon";
 import Loader from "../Loader/Loader";
+import { AddCartIcon } from "../../assets/ts";
+import { useCartContext } from "../../context/CartContext";
 
 export default function Category() {
   const { id } = useParams();
   const { products, productsLoading } = useProductRequests(Number(id));
-  console.log(products, productsLoading);
   const categories = JSON.parse(localStorage.getItem("categories")!);
   const currentCategory = categories.find(
     (item: ICategoryRequest) => item.id === id
   );
-  console.log(currentCategory);
-  const AddNewItemHandker = () => {
-    console.log("here");
+  const { addItem } = useCartContext();
+  const AddNewItemHandker = (product: IProductRequest) => {
+    addItem(product.id, product);
   };
   return (
     <div className="client_div">
@@ -44,7 +44,9 @@ export default function Category() {
                       {dictionary.toman}
                     </div>
                     <button
-                      onClick={AddNewItemHandker}
+                      onClick={() => {
+                        AddNewItemHandker(item);
+                      }}
                       className="add_cart_btn"
                     >
                       <AddCartIcon />

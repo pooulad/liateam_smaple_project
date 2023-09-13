@@ -1,7 +1,15 @@
 export const dictionary = {
+  cart: {
+    total: "جمع کل",
+    payable: "مبلغ قابل پرداخت :",
+  },
   toman: "تومان",
   home: {
     title: "دسته بندی",
+  },
+  header: {
+    cart_counter_title: "قلم کالا",
+    not_found: "محصولی یافت نشد",
   },
   gettingAssets: "در حال بارگیری صفحه ...",
   footer: {
